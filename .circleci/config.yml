@@ -284,18 +284,18 @@ workflows:
       - push-images:
           requires:
             - make-images
-            - test-builder
-            - test-cli
-            - test-client
-            - test-data-provider
-            - test-dataset
-            - test-model
-            - test-serializer
-            - test-server
-            - test-util
-            - test-watchman
-            - test-formatting
-            - test-allelse
+            #- test-builder
+            #- test-cli
+            #- test-client
+            #- test-data-provider
+            #- test-dataset
+            #- test-model
+            #- test-serializer
+            #- test-server
+            #- test-util
+            #- test-watchman
+            #- test-formatting
+            #- test-allelse
           filters:
             branches:
               only:
