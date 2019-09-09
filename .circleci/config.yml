@@ -99,7 +99,7 @@ jobs:
           command: |
             source ~/code/venv/bin/activate
             python -m pip install twine
-            twine upload -u travis-statoil --skip-existing dist/*
+            twine upload -u statoil-travis --skip-existing dist/*
 
 
 
