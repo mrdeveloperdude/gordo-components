@@ -83,8 +83,7 @@ jobs:
 
   # Publish to PyPi, only on tagged commits.
   publish-to-pypi:
-    docker:
-      - image: circleci/python:3.6
+    executor: python-executor
     steps:
       - checkout
       - restore-venv-cache
@@ -303,9 +302,9 @@ workflows:
                 - switch-to-circleci
             tags:
               only: /.*/
-      - publish-to-pypi:
-          requires:
-            - push-images
+      - publish-to-pypi
+          #requires:
+          #  - push-images
           #filters:
           #  branches:
           #    ignore: /.*/
